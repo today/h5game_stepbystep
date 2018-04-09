@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Document</title>
+</head>
+<body>
+    <h1>Mine</h1>
+    <p>A example of mine game.</p>
+    <hr />
+    <table border=1>
+        <tr>
+            <td><img src="brick.png" ></img></td><td><img src="brick.png"></td>
+            <td><img src="brick.png"></td><td><img src="brick.png"></td><td><img src="brick.png"></td>
+        </tr>
+        <tr>
+            <td><img src="brick.png"></img></td><td><img src="brick.png"></td>
+            <td><img src="brick.png"></td><td><img src="brick.png"></td><td><img src="brick.png"></td>
+        </tr>
+        <tr>
+            <td><img src="brick.png"></img></td><td><img src="brick.png"></td>
+            <td><img src="brick.png"></td><td><img src="brick.png"></td><td><img src="brick.png"></td>
+        </tr>
+        <tr>
+            <td><img src="brick.png"></img></td><td><img src="brick.png"></td>
+            <td><img src="brick.png"></td><td><img src="brick.png"></td><td><img src="brick.png"></td>
+        </tr>
+        <tr>
+            <td><img src="brick.png"></img></td><td><img src="brick.png"></td>
+            <td><img src="brick.png"></td><td><img src="brick.png"></td><td><img src="brick.png"></td>
+        </tr>
+    </table>
+    
+    
+    <script type="text/javascript" >
+        var tags = document.getElementsByTagName('img');
+        
+        
+        function bang(obj){
+            console.log(":");
+            console.log(obj.srcElement);
+            obj.srcElement.src = "mines.png" ;
+            
+        }
+        
+        var tag = null;
+        for( var i=0;i< tags.length; i++ ){
+            //tag.onclick = bang(tag);
+            tag = tags[i];
+            
+            tag.addEventListener("click",bang,false);
+            console.log(tag);
+        }
+        
+        
+        
+    </script>
+    
+    
+    
+    
+</body>
+</html>
